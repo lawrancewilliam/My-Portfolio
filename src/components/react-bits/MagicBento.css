@@ -1,0 +1,86 @@
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.magic-bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 180px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 200px;
+}
+
+.magic-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(212, 175, 55, 0.18), 0 0 30px rgba(245, 208, 96, 0.12);
+}
+
+.magic-bento-card__header { display: flex; justify-content: space-between; }
+.magic-bento-card__content { display: flex; flex-direction: column; gap: 0.5rem; margin-top: auto; }
+.magic-bento-card__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #d4af37;
+  font-weight: 600;
+}
+.magic-bento-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.magic-bento-card__description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.magic-bento-card--border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(var(--glow-color, 212, 175, 55), calc(var(--glow-intensity) * 0.8)) 0%,
+    rgba(var(--glow-color, 212, 175, 55), calc(var(--glow-intensity) * 0.3)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.span-large { grid-column: span 2; grid-row: span 2; }
+.span-wide { grid-column: span 2; }
+
+@media (max-width: 768px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .span-large, .span-wide { grid-column: span 1; grid-row: span 1; }
+}
+
+@media (min-width: 769px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.bento-section { position: relative; }
