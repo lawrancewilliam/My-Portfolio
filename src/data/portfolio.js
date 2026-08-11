@@ -149,6 +149,30 @@ export const experience = [
   },
   {
     period: '2025',
+    role: 'Java Programming Graduate',
+    company: 'NPTEL (National Programme on Technology Enhanced Learning)',
+    duration: '12 Weeks',
+    tags: [
+      'Object-Oriented Programming',
+      'Exception Handling & Multithreading',
+      'Java Collections Framework',
+      'Problem Solving with Java',
+    ],
+  },
+  {
+    period: '2026',
+    role: 'Venture Idea Development Graduate',
+    company: 'Wadhwani Foundation (Ignite Bootcamp)',
+    duration: '10 Hours',
+    tags: [
+      'Ideation & Prototyping',
+      'Business Modeling',
+      'Financial Planning',
+      'Innovation & Impact',
+    ],
+  },
+  {
+    period: '2025',
     role: 'Full Stack Intern',
     company: 'Livewire',
     duration: '15 Days',
