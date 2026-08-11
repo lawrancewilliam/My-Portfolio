@@ -7,7 +7,7 @@ export const personal = {
   location: 'Salem, Tamil Nadu',
   linkedin: 'https://www.linkedin.com/in/lawrance-william-y',
   github: 'https://github.com/lawrancewilliam',
-  resumeUrl: 'https://raw.githubusercontent.com/lawrancewilliam/My-Portfolio/main/Lawrance%20Resume.pdf',
+  resumeUrl: '/Resume/LAWRANCE%20WILLIAM%20Y%20Resume.pdf',
   brand: 'LAWRANCE WILLIAM Y ',
 };
 
